@@ -1,0 +1,111 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: hsl(33, 100%, 97%);
+  --foreground: hsl(28, 56%, 8%);
+  --muted: hsl(33, 23%, 94%);
+  --muted-foreground: hsl(28, 11%, 45%);
+  --popover: hsl(0, 0%, 100%);
+  --popover-foreground: hsl(28, 56%, 8%);
+  --card: hsl(0, 0%, 100%);
+  --card-foreground: hsl(28, 56%, 8%);
+  --border: hsl(28, 30%, 90%);
+  --input: hsl(28, 30%, 90%);
+  --primary: hsl(24, 100%, 60%);
+  --primary-foreground: hsl(0, 0%, 100%);
+  --secondary: hsl(33, 23%, 94%);
+  --secondary-foreground: hsl(28, 25%, 10%);
+  --accent: hsl(33, 23%, 94%);
+  --accent-foreground: hsl(28, 25%, 10%);
+  --destructive: hsl(0, 84%, 60%);
+  --destructive-foreground: hsl(60, 9%, 98%);
+  --ring: hsl(28, 56%, 8%);
+  --radius: 0.5rem;
+  
+  /* Mikan color palette */
+  --mikan-50: hsl(33, 100%, 97%);
+  --mikan-100: hsl(31, 100%, 91%);
+  --mikan-200: hsl(30, 100%, 83%);
+  --mikan-300: hsl(24, 100%, 70%);
+  --mikan-400: hsl(24, 100%, 50%);
+  --mikan-500: hsl(19, 100%, 60%);
+  --mikan-600: hsl(19, 80%, 52%);
+  --mikan-700: hsl(19, 80%, 42%);
+  --mikan-800: hsl(19, 80%, 32%);
+  --mikan-900: hsl(19, 80%, 22%);
+}
+
+.dark {
+  --background: hsl(28, 10%, 4%);
+  --foreground: hsl(0, 0%, 98%);
+  --muted: hsl(28, 4%, 16%);
+  --muted-foreground: hsl(28, 5%, 65%);
+  --popover: hsl(28, 10%, 4%);
+  --popover-foreground: hsl(0, 0%, 98%);
+  --card: hsl(28, 10%, 4%);
+  --card-foreground: hsl(0, 0%, 98%);
+  --border: hsl(28, 4%, 16%);
+  --input: hsl(28, 4%, 16%);
+  --primary: hsl(24, 100%, 60%);
+  --primary-foreground: hsl(0, 0%, 100%);
+  --secondary: hsl(28, 4%, 16%);
+  --secondary-foreground: hsl(0, 0%, 98%);
+  --accent: hsl(28, 4%, 16%);
+  --accent-foreground: hsl(0, 0%, 98%);
+  --destructive: hsl(0, 63%, 31%);
+  --destructive-foreground: hsl(0, 0%, 98%);
+  --ring: hsl(28, 5%, 84%);
+  --radius: 0.5rem;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+    font-family: 'Noto Sans JP', 'Inter', sans-serif;
+  }
+}
+
+@layer utilities {
+  .text-mikan-50 { color: var(--mikan-50); }
+  .text-mikan-100 { color: var(--mikan-100); }
+  .text-mikan-200 { color: var(--mikan-200); }
+  .text-mikan-300 { color: var(--mikan-300); }
+  .text-mikan-400 { color: var(--mikan-400); }
+  .text-mikan-500 { color: var(--mikan-500); }
+  .text-mikan-600 { color: var(--mikan-600); }
+  .text-mikan-700 { color: var(--mikan-700); }
+  .text-mikan-800 { color: var(--mikan-800); }
+  .text-mikan-900 { color: var(--mikan-900); }
+  
+  .bg-mikan-50 { background-color: var(--mikan-50); }
+  .bg-mikan-100 { background-color: var(--mikan-100); }
+  .bg-mikan-200 { background-color: var(--mikan-200); }
+  .bg-mikan-300 { background-color: var(--mikan-300); }
+  .bg-mikan-400 { background-color: var(--mikan-400); }
+  .bg-mikan-500 { background-color: var(--mikan-500); }
+  .bg-mikan-600 { background-color: var(--mikan-600); }
+  .bg-mikan-700 { background-color: var(--mikan-700); }
+  .bg-mikan-800 { background-color: var(--mikan-800); }
+  .bg-mikan-900 { background-color: var(--mikan-900); }
+  
+  .border-mikan-200 { border-color: var(--mikan-200); }
+  .border-mikan-500 { border-color: var(--mikan-500); }
+  
+  .hover\:bg-mikan-100:hover { background-color: var(--mikan-100); }
+  .hover\:bg-mikan-200:hover { background-color: var(--mikan-200); }
+  .hover\:bg-mikan-700:hover { background-color: var(--mikan-700); }
+  .hover\:text-mikan-600:hover { color: var(--mikan-600); }
+  .hover\:text-mikan-700:hover { color: var(--mikan-700); }
+  
+  .focus\:ring-mikan-500:focus { 
+    --tw-ring-opacity: 1;
+    --tw-ring-color: var(--mikan-500);
+  }
+  .focus\:border-mikan-500:focus { border-color: var(--mikan-500); }
+}
